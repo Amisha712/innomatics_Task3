@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+/* Basic Styles for Sections */
+header {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.content {
+    background-color: lightgreen;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.features {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.feature-item {
+    background-color: lightcoral;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.signup {
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Mobile Layout (up to 600px) */
+@media (max-width: 600px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "content"
+            "signup"
+            "features";
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+/* Tablet Layout (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "content"
+            "signup"
+            "features";
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop Layout (1025px and above) */
+@media (min-width: 1025px) {
+    .container {
+        grid-template-areas:
+            "header header header"
+            "features features features"
+            "signup signup signup"
+            "content content content";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "content"
+        "signup"
+        "features";
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+/* Basic Styles */
+.header {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    background-color: lightgreen;
+    padding: 20px;
+    text-align: center;
+}
+
+.signup {
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    text-align: center;
+}
+
+.features {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.feature-item {
+    background-color: lightcoral;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "content"
+            "signup"
+            "features";
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+/* Tablet Layout */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "content"
+            "signup"
+            "features";
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop Layout */
+@media (min-width: 1025px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "features features features"
+            "signup signup signup"
+            "content content content";
+    }
+
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
